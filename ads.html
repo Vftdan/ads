@@ -3,8 +3,8 @@
 <script defer>
 var elem=document.getElementById("cont");
 var h=location.hash;
-alert(imgs["#1"]);
 elem.style.backgroundImage='url("'+imgs[h]+'")';
+alert(elem.style.backgroundImage);
 elem.onclick=function(){
 window.open(urls[h],"_blank");
 }
