@@ -1,16 +1,3 @@
-<script src="urls.js"></script>
-<div id="cont"></div>
-<script defer>
-var elem=document.getElementById("cont");
-var h=location.hash;
-//alert([h,h=="#1"]);
-elem.style.backgroundImage='url("'+imgs[h]+'")';
-//alert(elem.style.backgroundImage);
-elem.onclick=function(){
-window.open("go.html#"+urls[h],"_blank");
-}
-
-</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
@@ -40,16 +27,12 @@ window.open("go.html#"+urls[h],"_blank");
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/41734689" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<style>
-* {
-margin:0px;
-padding:0px;
-}
-#cont {
-height:100%;
-width:100%;
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-}
-</style>
+
+<script>
+window.addEventListener("load",function(){
+var h=location.hash.split('');
+h[0]='';
+h=decodeURIComponent(h.join(''));
+setTimeout(window.open.bind(window,h,"_self"),500)
+},false);
+</script>
