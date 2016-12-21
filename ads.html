@@ -1,0 +1,21 @@
+<script src="urls.js"></script>
+<div id="cont"></div>
+<script defer>
+//alert(1)
+var elem=document.getElementById("cont");
+var h=location.hash;
+//alert(window.imgs);
+elem.style.backgroundImage='url("'+imgs[h]+'")';
+//alert(elem.style.backgroundImage);
+//alert(1.5)
+elem.onclick=function(){
+window.open(urls[h],"_blank");
+}
+//alert(2)
+</script>
+<style>
+#cont {
+height:100%;
+width:100%;
+}
+</style>
