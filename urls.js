@@ -1,3 +1,4 @@
 //&%26 =%3D /%2F
-window.imgs={"#1":"img/1.png"};
-window.urls={"#1":"contact.html"};
+window.imgs=["img/1.png"];
+window.urls=["contact.html"];
+window.hashs={"#1":0}
