@@ -1,13 +1,16 @@
 <script src="urls.js"></script>
-<div id="cont"><br /></div>
+<a id="cont"><br /></a>
 <script defer>
 var elem=document.getElementById("cont");
+    
 var h=hashs[location.hash];
+var url="go.html#"+urls[h];
 //alert([h,h=="#1"]);
 elem.style.backgroundImage='url("'+imgs[h]+'")';
+elem.setAttribute("href",url);
 //alert(elem.style.backgroundImage);
 elem.onclick=function(){
-window.open("go.html#"+urls[h],"_blank");
+window.open(url,"_blank");
 }
 
 </script>
@@ -46,6 +49,7 @@ margin:0px;
 padding:0px;
 }
 #cont {
+display:block;
 height:100%;
 width:100%;
 background-size:contain;
